@@ -22,6 +22,10 @@ def jacket():
 def shoes():
     return render_template('shoes.html')
 
+@app.route('/accessories/')
+def accessories():
+    return render_template('accessories.html')
+
 
 if __name__ == '__main__':
     app.run()
