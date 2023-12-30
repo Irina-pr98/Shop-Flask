@@ -5,14 +5,17 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/clothes">Одежда</a></li>
-            <li><a href="/jacket">Куртка</a></li>
-            <li><a href="/shoes">Обувь</a></li>
-        </ul>
-    </nav>
     <header>
+        <nav>
+            <ul>
+                <li><a href="/clothes" class="submenu-link">Одежда</a>
+                    <ul class="submenu">
+                        <li><a href="/jacket">Куртка</a></li>
+                    </ul>
+                </li>
+                <li><a href="/shoes">Обувь</a></li>
+            </ul>
+        </nav>
         {% block content %} {% endblock %}
         <p>Стоимость: {% block cost %} {% endblock %}</p>
     </header>
