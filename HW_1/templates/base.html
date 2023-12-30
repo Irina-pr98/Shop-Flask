@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/clothes" class="submenu-link">Одежда</a>
+                    <ul class="submenu">
+                        <li><a href="/jacket">Куртка</a></li>
+                    </ul>
+                </li>
+                <li><a href="/accessories">Аксессуары</a></li>
+                <li><a href="/shoes">Обувь</a></li>
+            </ul>
+        </nav>
+        {% block content %} {% endblock %}
+        <p>Стоимость: {% block cost %} {% endblock %}</p>
+    </header>
+    <footer>
+        <p>Контакты: +7(999)876-54-32 Москва, Ленина 1</p>
+    </footer>
+</body>
+</html>
